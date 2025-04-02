@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    color-scheme: light;
+    --fg-default: #131313;
+    --bg-default: #F6F5F2;
+    --bg-subtle: #F0EBE3;
+    --bg-gradient: #D2FF72;
+    /*--bg-gradient: linear-gradient(to right, var(--bg-subtle), #d4d3dd),
+    url(https://grainy-gradients.vercel.app/noise.svg);*/
+  }
+ 
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --fg-default: #F6F5F2;
+    --bg-default: #222831;
+    --bg-subtle: #31363F;
+    --bg-gradient: #2F576E;
+    /*--bg-gradient: linear-gradient(to right, #141E30, #0F2027),
+    url(https://grainy-gradients.vercel.app/noise.svg);*/
+  }
+
+body{
+    background: var(--bg-default);
+    font-family: "Outfit", sans-serif;
+    color: var(--fg-default);
+    margin: auto;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+nav {
+    background: var(--bg-default);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    gap: 24px;
+}
+
+nav > h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+nav > button {
+    background: none;
+    border: var(--fg-default) solid 1px;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.85em;
+    padding: 7px 11px;
+    border-radius: 100px;
+}
+
+li {
+    padding: 6px 0;
+    list-style-type: square;
+}
+
+.introduction{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.introduction > p {
+    text-align: center;
+    font-size: 3em;
+    /* clamp   ^^^  */
+    width: 60%;
+    min-width: 280px;
+}
+
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+footer {
+    margin: 40px auto;
+    background: var(--bg-gradient);
+    min-height: 40vh;
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+footer > div {
+    display: flex;
+    gap: 16px;
+}
+
+footer > h2 {
+    font-size: clamp(3em, 8vw, 8em) !important;
+    line-height: 1;
+    margin: 32px 0;
+}
+
+a:any-link{
+    color: var(--fg-default);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--fg-default) ;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.about {
+    margin-bottom: 40px;
+}
+
+.about-highlight {
+    font-size: 1.8em;
+    line-height: 1.4;
+}
+
+.about-description {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+.work {
+    margin-bottom: 40px;
+}
+
+.work-card {
+    border-radius: 20px;
+    background: var(--bg-subtle);
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.work-card > h3 {
+    margin: 0;
+}
+.work-card > h4 {
+    margin: 0;
+}
+.work-card > p {
+    margin: 0;
+}
+
+
+.work-grid {
+    display: flex; 
+    flex-direction: column;
+    gap: 16px;
+}
+
+.work-grid > a {
+    text-decoration: none;
+}
+
+/* .carousel */
+
+img.reload {
+    padding: 0.25em;
+    display: block-inline;
+    position: relative;
+    top: 6px;
+    height: 0.9em;
+  }
+  
+  .project-grid {
+    margin: 160px 0;
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 900px;
+    padding: 0;
+  }
+
+  .carousel .carousel-items {
+    padding: 40px;
+    background: #131313;
+    border-radius: 24px;
+  }
+
+  .carousel-image > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .controls > p {
+    font-size: 1.2em;
+  }
+
+  .carousel-arrow {
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .carousel .carousel-inner {
+    position: relative;
+  }
+  
+ 
+  
+  .carousel .carousel-items.focus {
+    padding: 2px;
+    border: solid 3px #005a9c;
+  }
+  
+  .carousel .carousel-item {
+    display: none;
+    /* max-height: 400px; */
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel .carousel-item.active {
+    display: block;
+  }
+  
+
+ 
+
+  .carousel-arrow:hover {
+    background-color: var(--bg-subtle);
+  }
+  
+  /* SVG Controls */
+  
+  .carousel .controls svg .background {
+    stroke: black;
+    fill: black;
+    stroke-width: 1px;
+    opacity: 0.6;
+  }
+  
+  .carousel .controls svg .border {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 2px;
+  }
+  
+  .carousel .controls svg .pause {
+    stroke-width: 4;
+    fill: transparent;
+    stroke: transparent;
+  }
+  
+  .carousel .controls svg .play {
+    stroke-width: 1;
+    fill: transparent;
+    stroke: transparent;
+  }
+  
+  .carousel .controls .pause svg .pause {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls .play svg .play {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls svg polygon {
+    fill: white;
+    stroke: white;
+  }
+  
+  .carousel .controls button:focus svg .background,
+  .carousel .controls button:hover svg .background,
+  .carousel .controls button:hover svg .border {
+    fill: #005a9c;
+    stroke: #005a9c;
+    opacity: 1;
+  }
+  
+  .carousel .controls button:focus svg .border {
+    stroke: white;
+  }
+  
+  /* More accessible carousel styles, with caption and controls above/below image */
+  
+  .carousel-moreaccessible {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border: #eee solid 4px;
+    border-radius: 5px;
+  }
+  
+  /* Shared CSS for Pause and Tab Controls */
+  
+  .carousel-moreaccessible .controls {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.25em 0;
+  }
+  
+  .carousel.carousel-moreaccessible .controls {
+    position: static;
+    height: 36px;
+  }
+  
+  .carousel.carousel-moreaccessible .controls button.previous {
+    right: 60px;
+  }
+  
+  .carousel.carousel-moreaccessible .controls button.next {
+    right: 6px;
+  }
+  
+  .carousel-moreaccessible .carousel-items,
+  .carousel-moreaccessible .carousel-items.focus {
+    padding: 0;
+    border: none;
+  }
+  
+  .carousel-moreaccessible .carousel-items.focus .carousel-image a {
+    padding: 2px;
+    border: 3px solid #005a9c;
+  }
+  
+  /* More accessible caption styling */
+  
+  .carousel-moreaccessible .carousel-item {
+    padding: 0;
+    margin: 0;
+    max-height: none;
+  }
+  
+  .carousel-moreaccessible .carousel-item .carousel-caption {
+    position: static;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    color: black;
+  }
+  
+
+
+@media screen and (min-width: 600px) {
+    .about-grid {
+        display: grid; 
+        grid-template-columns: 3fr 2fr; 
+        grid-template-rows: 1fr; 
+        grid-column-gap: 24px;
+        grid-row-gap: 0px; 
+    }
+    .work-grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-gap: 24px;
+    }
+    .work-card {
+        padding: 40px 40px;
+    }
+    .project-grid {
+        display: grid; 
+        grid-template-columns: 1fr 2fr; 
+        grid-template-rows: 1fr; 
+        grid-column-gap: 24px;
+        grid-row-gap: 0px; 
+    }
+    .carousel .carousel-items {
+        padding: 64px;
+      }
+    section {
+        padding: 0 40px;
+    }
+
+
+}
+
