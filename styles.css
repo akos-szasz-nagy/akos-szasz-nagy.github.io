@@ -77,6 +77,18 @@ li {
     min-width: 280px;
 }
 
+.core-values {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 64px auto;
+}
+
+.core-values > h3 {
+    margin: 4px;
+}
+
 section {
     max-width: 1600px;
     margin: 0 auto;
@@ -124,12 +136,12 @@ h2 {
 }
 
 .about-highlight {
-    font-size: 1.8em;
+    font-size: 1.4em;
     line-height: 1.4;
 }
 
 .about-description {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.7;
 }
 
@@ -216,6 +228,15 @@ img.reload {
     cursor: pointer;
     border: none;
     background: none;
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-arrow > svg {
+    fill: var(--fg-default);
   }
  
   
@@ -243,59 +264,6 @@ img.reload {
     background-color: var(--bg-subtle);
   }
   
-  /* SVG Controls */
-  
-  .carousel .controls svg .background {
-    stroke: black;
-    fill: black;
-    stroke-width: 1px;
-    opacity: 0.6;
-  }
-  
-  .carousel .controls svg .border {
-    fill: transparent;
-    stroke: transparent;
-    stroke-width: 2px;
-  }
-  
-  .carousel .controls svg .pause {
-    stroke-width: 4;
-    fill: transparent;
-    stroke: transparent;
-  }
-  
-  .carousel .controls svg .play {
-    stroke-width: 1;
-    fill: transparent;
-    stroke: transparent;
-  }
-  
-  .carousel .controls .pause svg .pause {
-    fill: white;
-    stroke: white;
-  }
-  
-  .carousel .controls .play svg .play {
-    fill: white;
-    stroke: white;
-  }
-  
-  .carousel .controls svg polygon {
-    fill: white;
-    stroke: white;
-  }
-  
-  .carousel .controls button:focus svg .background,
-  .carousel .controls button:hover svg .background,
-  .carousel .controls button:hover svg .border {
-    fill: #005a9c;
-    stroke: #005a9c;
-    opacity: 1;
-  }
-  
-  .carousel .controls button:focus svg .border {
-    stroke: white;
-  }
   
   /* More accessible carousel styles, with caption and controls above/below image */
   
@@ -317,6 +285,11 @@ img.reload {
   .carousel.carousel-moreaccessible .controls {
     position: static;
     height: 36px;
+  }
+
+  .controls > button {
+    min-height: 44px;
+
   }
   
   .carousel.carousel-moreaccessible .controls button.previous {
@@ -354,9 +327,20 @@ img.reload {
     color: black;
   }
   
-
+.circle {
+    fill: var(--fg-default);
+}
 
 @media screen and (min-width: 600px) {
+    .about-highlight {
+        font-size: 1.8em;
+        line-height: 1.4;
+    }
+    
+    .about-description {
+        font-size: 1.2em;
+        line-height: 1.7;
+    }
     .about-grid {
         display: grid; 
         grid-template-columns: 3fr 2fr; 
