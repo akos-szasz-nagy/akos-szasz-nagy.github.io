@@ -70,7 +70,8 @@ li {
 
 .introduction > p {
     text-align: center;
-    font-size: 3em;
+    /* font-size: 3em; */
+    font-size: clamp(1.7em, 3vw, 3em);
     /* clamp   ^^^  */
     width: 60%;
     min-width: 280px;
@@ -170,13 +171,17 @@ h2 {
 img.reload {
     padding: 0.25em;
     display: block-inline;
-    position: relative;
     top: 6px;
     height: 0.9em;
   }
   
   .project-grid {
     margin: 160px 0;
+  }
+
+  .project-tags{
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
   .carousel {
@@ -193,7 +198,7 @@ img.reload {
 
   .carousel-image > img {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    /* aspect-ratio: 16 / 10; */
   }
 
   .controls {
@@ -212,11 +217,6 @@ img.reload {
     border: none;
     background: none;
   }
-  
-  .carousel .carousel-inner {
-    position: relative;
-  }
-  
  
   
   .carousel .carousel-items.focus {
@@ -228,7 +228,6 @@ img.reload {
     display: none;
     /* max-height: 400px; */
     max-width: 900px;
-    position: relative;
     overflow: hidden;
     width: 100%;
   }
@@ -303,7 +302,6 @@ img.reload {
   .carousel-moreaccessible {
     padding: 0;
     margin: 0;
-    position: relative;
     border: #eee solid 4px;
     border-radius: 5px;
   }
@@ -311,7 +309,6 @@ img.reload {
   /* Shared CSS for Pause and Tab Controls */
   
   .carousel-moreaccessible .controls {
-    position: relative;
     top: 0;
     left: 0;
     padding: 0.25em 0.25em 0;
