@@ -11,22 +11,34 @@
     </head>
     <body>
         <nav>
-            <h1>Akos Szasz-Nagy</h1>
+            <div>
+                <h1>Akos Szasz-Nagy</h1>
             <button
                 id="theme-toggle"
                 aria-labelledby="theme-label"
                 onclick="switchTheme()"
             ><span id="theme-label">Switch theme</span></button>
+
+            </div>
+            <div>
+                <a href="#core-values">Core Values</a>
+                <a href="#about">About</a>
+                <a href="#work">Previous work</a>
+                <a href="#projects">Projects</a>
+            </div>
+            
         </nav>
-        <section class="introduction">
+        <section id="introduction">
+            <img class="avatar" src="img/akos-2024.jpg">
+
             <p>
                 Product Designer & UX Engineer based in the Netherlands with a focus on innovative, inclusive and sustainable solutions.
             </p>
         </section>
         <hr>
-        <section class="core-values">
+        <section id="core-values">
             <h2>Core Values</h2>
-<!--             <h3>1. Inclusivity</h3>
+            <!--             <h3>1. Inclusivity</h3>
             <p>A design usable by anyone is a good product experience.</p>
             <h3>2. Simplicity</h3>
             <p>Elegant, minimalist design approaches complex challenges with thoughtful, seemingly effortless solutions.</p>
@@ -55,39 +67,57 @@
                 </div>
         </section>
         <hr>
-        <section class="about">
-            <h2>
-                About me
-            </h2>
-            
-            <div class="about-grid">
-                <div>
-                    
-                    <p class="about-highlight">
-                        I make design decisions by listening to customer pain-points and tracking product measurements. 
-                        Innovation comes from need and usability.
-                    </p>
-                    <p class="about-description">
-                        10+ years of experience working in Design including 6+ years of UI/UX in the B2B SaaS industry
-                    </p>
+        <section id="about">
+                <h2>
+                    About me
+                </h2>
+                
+                <div class="about-grid">
+                    <div>
+                        <p class="about-highlight">
+                            I make design decisions by listening to customer pain-points and tracking product measurements. 
+                            Innovation comes from need and usability.
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <p class="about-description">
+                            10+ years of experience working in Design including 6+ years of UI/UX in the B2B SaaS industry
+                        </p>
                     <p class="about-description">
                         As a UX Designer, I’m passionate about driving UX maturity and empowering designers to reach their full potential. I aim to bridge the gap between design and engineering, fostering collaboration that transforms ideas into innovative, user-centered solutions.
                     </p>
                     <p class="about-description">
                         I’m a firm believer of the importance of a holistic product mindset, especially when crafting visions that inspire teams and guide products toward meaningful impact. For me, great design isn’t just effective — it’s also inclusive, ensuring usable and delightful experiences for everyone.
                     </p>
+                    </div>
                 </div>
+            <div class="work-grid">
                 <div class="about-description">
+                    <h3>UX skills</h3>
                     <ul>
                         <li>Product design</li>
                         <li>Research and Usability testing</li>
                         <li>UX Copywriting</li>
                         <li>Designing for accessibility and inclusivity</li>
-                        <li>Building coded design prototypes using Vue3</li>
                         <li>Design System</li>
+                        <li>Developing UX Maturity</li>
+                    </ul>
+                </div>
+                <div class="about-description">
+                    <h3>Engineering skills</h3>
+                    <ul>
+                        <li>HTML, CSS, Javascript</li>
+                        <li>Web accessibility</li>
+                        <li>Building coded design prototypes using Vue3</li>
+                        <li>Experience building React apps</li>
+                    </ul>
+                </div>
+                <div class="about-description">
+                    <h3>Other skills</h3>
+                    <ul>
                         <li>Conducting Design Sprints to drive innovation</li>
                         <li>Writing documentation</li>
-                        <li>Developing UX Maturity</li>
                         <li>Leadership and mentoring</li>
                         <li>Product discovery</li>
                         <li>Fluent English & Beginner Dutch</li>
@@ -97,7 +127,7 @@
             </div>
         </section>
         <hr>
-        <section class="work">
+        <section id="work">
             <h2>
                 Previous work
             </h2>
@@ -156,10 +186,9 @@
                     <p>Freelancing Designer Community</p>
                     <p>2017 – 2022</p>
                 </div>
-            </section>
-            <hr>
-            </div>
-            <section class="my-work">
+        </section>
+        <hr>
+        <section id="projects">
                 <h2>Projects</h2>
                 <div id="project-motie" class="project-grid">
                     <div>
@@ -362,8 +391,8 @@
                     </section>  
                 </div>
         </section>
-        <hr>
-        <section class="process">
+        <!--<hr>
+                 <section class="process">
             <h2>How I work?</h2>
             <div>
 
@@ -386,11 +415,14 @@
                     After release, measure the usability of the feature continuously.
 
             </div>
-        </section>
+        </section> -->
         <section>
             <footer>
+
                 <h2>Say hi!</h2>
+
                 <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M11.293 4.707 17.586 11H4v2h13.586l-6.293 6.293 1.414 1.414L21.414 12l-8.707-8.707-1.414 1.414z"/></svg>
                     <a href="mailto:akos.szasz.nagy@gmail.com?subject=Hi!">Email</a>
                     <a href="linkedin.com">Linkedin</a>
                 </div>
