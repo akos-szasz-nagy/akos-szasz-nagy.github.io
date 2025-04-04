@@ -60,6 +60,7 @@ nav button {
     font-size: 0.85em;
     padding: 7px 11px;
     border-radius: 100px;
+    color: var(--fg-default)
 }
 
 li {
@@ -78,7 +79,7 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    padding: 120px 0;
 }
 
 #introduction > p {
@@ -359,6 +360,10 @@ footer svg {
 }
 
 @media screen and (min-width: 600px) {
+    #introduction {
+        height: 100vh;
+        padding: 0;
+    }
     .about-highlight {
         font-size: 1.8em;
         line-height: 1.4;
